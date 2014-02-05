@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require backbone-rails
+//= require backbone.marionette
 //= require_tree .
