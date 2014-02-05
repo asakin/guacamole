@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require backbone-rails
 //= require backbone.marionette
+//= require bootstrap
 //= require_tree .
