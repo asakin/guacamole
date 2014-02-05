@@ -1,0 +1,1 @@
+class GC.GameControls extends Backbone.Marionette.ItemView

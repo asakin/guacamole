@@ -1,3 +1,53 @@
-// Place all the styles related to the game controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#game-container {
+  .game-console {
+
+    .score-board-container {
+      @include span-columns(12);
+    }
+
+    .game-board-container {
+      @include span-columns(12);
+
+      .game-board {
+        @include span-columns(6 of 12);
+        @include shift(3);
+
+        .holes-line{
+          text-align: center;
+        }
+
+        .hole {
+          @include inline-block();
+          background-image: url(/assets/hole.png);
+          height: 150px;
+          width: 150px;
+          background-color: red;
+
+          .mole-container {
+            height: 130px;
+            width: 150px;
+            position: absolute;
+            overflow: hidden;
+
+            .mole {
+              width: 50px;
+              height: 60px;
+              margin: 0 auto;
+              background-color: blue;
+              position: relative;
+              bottom: -120px;
+
+              &.out {
+                bottom: -60px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .controls-container {
+      @include span-columns(12);
+    }
+  }
+}

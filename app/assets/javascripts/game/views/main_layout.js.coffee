@@ -1,19 +1,18 @@
-class GC.MainLayout extends Backbone.Marionette.ItemView
-  template: "game/templates/demo_template"
-  className: "game-console"
+class GC.MainLayout extends Backbone.Marionette.Layout
+  template: 'game/templates/main_layout'
+  className: 'game-console'
 
-  serializeData: ->
-    stam: "asdf"
+  regions:
+    game_board: '.game-board-container'
+    score_board: '.score-board-container'
+    controls: '.controls-container'
 
-#  regions:
-#    status_region: ".status_indicator"
-#
-#  onShow: ->
-#    if @model.get('verified') == false
-#      @$('.device-data.name').addClass('unverified_device')
-#    @status = new SC.Management.Admin.Views.DeviceStatus(model: @model)
-#    @status_region.show(@status)
-#
-#  serializeData: ->
-#    device_name: @model.get("description") or "Unknown device"
-#    show_device_statuses: sc.current_organization.show_device_statuses
+  onShow: ->
+    gameBoard    = new GC.GameBoard()
+    scoreBoard   = new GC.ScoreBoard()
+    gameControls = new GC.GameControls()
+
+    @game_board.show(gameBoard)
+    @score_board.show(scoreBoard)
+    @controls.show(gameControls)
+
