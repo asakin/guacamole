@@ -15,13 +15,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bourbon'
 gem 'neat'
+gem 'handlebars_assets'
 gem 'backbone-rails'
 gem 'marionette-rails'
 
 
 group :development, :test do
   gem 'rspec-rails'
-  gem "phantomjs", ">= 1.8.1.1" # this is optional if you install phantomjs manually (as of teaspoon 0.7.9)
+  gem "phantomjs", ">= 1.8.1.1"
   gem "teaspoon"
 end
 

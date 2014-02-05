@@ -45,6 +45,11 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
+    handlebars_assets (0.15)
+      execjs (>= 1.2.9)
+      multi_json
+      sprockets (>= 2.0.3)
+      tilt
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -145,6 +150,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.1.0)
   bourbon
   coffee-rails (~> 4.0.0)
+  handlebars_assets
   jbuilder (~> 1.2)
   jquery-rails
   marionette-rails

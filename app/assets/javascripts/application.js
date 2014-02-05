@@ -15,5 +15,8 @@
 //= require turbolinks
 //= require backbone-rails
 //= require backbone.marionette
+//= require handlebars.runtime
 //= require bootstrap
-//= require_tree .
+//= require initial_setup
+//= require_tree ./game
+

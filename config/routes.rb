@@ -1,3 +1,3 @@
 Guacamole::Application.routes.draw do
-  root 'hello#index'
+  root 'game#index'
 end
