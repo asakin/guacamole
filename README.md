@@ -10,3 +10,12 @@ The game is based on a basic rails scaffold, and is implemented as a JS applicat
 
 A running demo can be seen at: [http://guacamole-game.herokuapp.com](http://guacamole-game.herokuapp.com)
 
+
+Running the game
+----------------
+Provided that you have a rails environment set up with Rails 4.0 and Ruby 2.0, just clone this repo and run:
+
+`rails server`
+
+The game will be accessible on `http://localhost:3000`
+
