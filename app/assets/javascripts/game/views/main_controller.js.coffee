@@ -3,7 +3,7 @@ class GC.MainController extends Backbone.Marionette.Layout
   className: 'game-console'
 
   pointsPerWhack:    10
-  timePerGame:       30000
+  timePerGame:       30
 
   regions:
     game_board_region: '.game-board-container'
@@ -11,6 +11,7 @@ class GC.MainController extends Backbone.Marionette.Layout
     controls_region: '.controls-container'
 
   onShow: ->
+    # Create the different parts of the game and display them
     @gameBoard    = new GC.GameBoard()
     @scoreBoard   = new GC.ScoreBoard()
     @gameControls = new GC.GameControls()
@@ -30,7 +31,7 @@ class GC.MainController extends Backbone.Marionette.Layout
 
   _startGame: ->
     @scoreBoard.reset()
-    @counter = @timePerGame/1000
+    @counter = @timePerGame
     @scoreBoard.setTime(@counter)
 
     @interval = setInterval((=>
@@ -44,7 +45,7 @@ class GC.MainController extends Backbone.Marionette.Layout
 
     ), 1000)
 
-    @gameBoard.start(@timePerGame)
+    @gameBoard.start(@timePerGame * 1000)
 
   _resetGame: ->
     @gameBoard.stop()
