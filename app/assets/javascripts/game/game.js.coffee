@@ -8,7 +8,7 @@ gc.app.addRegions({
 
 # Allow history with push state
 gc.app.on("initialize:after", ->
-  gc.app.mainContainer.show(new GC.MainLayout())
+  gc.app.mainContainer.show(new GC.MainController())
 )
 
 # Start the JS application

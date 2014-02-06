@@ -20,25 +20,24 @@
           @include inline-block();
           background-image: url(/assets/hole.png);
           height: 150px;
-          width: 150px;
-          background-color: red;
+          width:  150px;
 
           .mole-container {
             height: 130px;
-            width: 150px;
+            width:  150px;
             position: absolute;
             overflow: hidden;
 
             .mole {
-              width: 50px;
-              height: 60px;
+              width:  83px;
+              height: 107px;
               margin: 0 auto;
-              background-color: blue;
+              background-image: url(/assets/avocado2.png);
               position: relative;
-              bottom: -120px;
+              bottom: -105px;
 
               &.out {
-                bottom: -60px;
+                bottom: -35px;
               }
             }
           }

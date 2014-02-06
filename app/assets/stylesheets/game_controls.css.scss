@@ -1,0 +1,6 @@
+.score-board {
+  @include span-columns(3 of 12);
+  text-align: center;
+  border: 1px black solid;
+}
+
