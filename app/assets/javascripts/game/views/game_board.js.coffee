@@ -12,7 +12,25 @@ class GC.GameBoard extends Backbone.Marionette.ItemView
       target.append(mole.render().$el)
     )
 
+  start: ->
+    @stopped = false
+    @_tic()
+
+  stop: ->
+    @stopped = true
+    @_resetBoard()
+
+  _tic: ->
+    @_resetBoard()
+    @$(".mole").eq(Math.floor(Math.random()*8)).addClass("out")
+    unless @stopped
+      setTimeout((=>@_tic()), 500+Math.random()*1500)
+
+  _resetBoard: ->
+    @$(".mole").removeClass("out")
+
   _onMoleClicked: (mole) ->
     # Mole is whacked only if it was outside
     if mole.isOutside()
+      mole.backIn()
       @trigger("mole:whacked")

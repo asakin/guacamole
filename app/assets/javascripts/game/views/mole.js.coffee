@@ -7,6 +7,9 @@ class GC.Mole extends Backbone.Marionette.ItemView
 
   isOutside: ->
     @$(".mole").hasClass("out")
-    
+
+  backIn: ->
+    @$(".mole").removeClass("out")
+
   _onMoleClicked: ->
     @trigger("clicked")

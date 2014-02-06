@@ -1,6 +1,25 @@
 .score-board {
-  @include span-columns(3 of 12);
-  text-align: center;
-  border: 1px black solid;
+  .score-container{
+    @include span-columns(3 of 12);
+    text-align: center;
+    border: 1px black solid;
+  }
+
+  .time-container {
+    @include span-columns(3 of 12);
+    @include shift(6);
+    text-align: center;
+    border: 1px black solid;
+  }
+}
+
+.game-controls{
+  @include span-columns(12 of 12);
+  margin: 50px 0 20px 0;
+
+  button {
+    width: 100%;
+    height: 50px;
+  }
 }
 
