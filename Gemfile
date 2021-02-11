@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
+gem 'rails', '6.0.3.5'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.1.0'
@@ -16,7 +16,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bourbon'
 gem 'neat'
 gem 'handlebars_assets'
-gem 'backbone-rails'
+gem 'backbone-rails', '>= 1.2.3'
 gem 'marionette-rails'
 
 
