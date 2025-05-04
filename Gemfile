@@ -21,7 +21,7 @@ gem 'marionette-rails'
 
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 8.0.0'
   gem "phantomjs", ">= 1.8.1.1"
   gem "teaspoon"
 end
